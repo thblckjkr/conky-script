@@ -1,0 +1,11 @@
+[*]
+end_of_line = lf
+tab_width = 3
+indent_style = tab
+indent_size = 3
+
+[*.sh]
+tab_width = 4
+
+[*.rc]
+tab_width = 3

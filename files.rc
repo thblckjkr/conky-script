@@ -1,0 +1,59 @@
+conky.config = {
+	-- Conky settings --
+	update_interval = 3,								-- update time in seconds
+	background = false,									-- translucent background
+	cpu_avg_samples = 2,								-- cpu for more accurate monitoring
+	net_avg_samples = 1,								-- internet for accurate monitoring
+	diskio_avg_samples = 1, 						-- drive for more accurate monitorinmg
+	override_utf8_locale = true,					-- overrides character encoding
+	double_buffer = true,							-- reduces frame flicker
+	-- no_buffers  = true,
+	text_buffer_size = 256, 						-- text buffer size
+	imlib_cache_size = 10,
+	max_user_text = 15000,
+	format_human_readable = true,					-- units in non-bytes
+
+	-- Window settings --
+	own_window = true,								-- turn onm your own window settings
+	own_window_type = 'dock',						-- window types, override = window manager rules do not apply, desktop = unedited panel = always top, dock = always over, normal = normal
+	own_window_transparent = true,				-- conky window becomes transparent
+	own_window_argb_visual = true,				-- trsansparent window
+	own_window_argb_value = 180,					-- degree of transparency 0-255
+	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager', 	-- window properties below = skip_taskbar = ignore tray undecorated = remove frame and buttons override = window manager override sticky = all workspaces
+	own_window_title = 'main',
+	minimum_width =  160,							-- minimum width
+	minimum_height = 800, 							-- minimum height
+	alignment = 'top_right', 					-- centered
+	gap_x = 20,										-- x direction shift
+	gap_y = 50,										-- y direction shift
+
+	-- Graphics settings --
+	draw_shades = false, 							-- test shading
+	draw_outline = false,							-- draw around
+	draw_borders = false,							-- draw a rectangular frame
+	draw_graph_borders = false, 					-- frame around the graph
+	border_width = 0, 								-- thickness of the fame
+
+	-- Text settings --
+	use_xft = true, 									-- antialiasing
+	font = 'font GE Inspira:pixelsize=20',		-- default font type
+	color0 = 'ffffff',								-- colors
+	color1 = '9039ad',
+	color2 = '522062',
+
+	lua_load = "scripts/conky_rings.lua",
+	lua_draw_hook_pre = 'rings'
+};
+
+conky.text = [[
+${goto 80}${voffset 65}${cpu}%
+
+${goto 20}${voffset 115}${mem}
+${goto 70}${voffset -5}${memmax}
+
+${goto 12}${voffset 92}${fs_used}
+${goto 72}${voffset -5}${fs_size}
+
+#${downspeed wlp2s0}
+#${upspeed wlp2s0}
+]];
