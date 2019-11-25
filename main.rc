@@ -64,7 +64,6 @@ ${if_up ppp0}${voffset -62}${offset 10}${color1}${font pixelsize=13}VPN enabled$
 #
 ${if_match "${exec pidof spotify}" != ""}${voffset -190}\
 ${if_match "${exec scripts/title.sh}" != ""}
-${voffset -6}${font Noto Sans:pixelsize=20}${color1}    Title: \
 	${voffset 12}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/title.sh}
 	${voffset -6}${font Noto Sans:pixelsize=20}${color1}Artist: \
 	${voffset 12}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/artist.sh}
