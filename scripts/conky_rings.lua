@@ -91,7 +91,7 @@ elements = {
 		r = 60,
 		width = 6,
 		start_angle = -80,
-		end_angle = 180
+		end_angle = 200
 	},
 	{
 		name = 'execi',
@@ -101,32 +101,60 @@ elements = {
 		y = 400,
 		r = 52,
 		width = 6,
-		start_angle = -70,
-		end_angle = 180
+		start_angle = -75,
+		end_angle = 220
 	},
 	{
-		name = 'downspeedf',
+		name = 'upspeedf',
 		arg = 'wlp2s0',
+		pre = '${if_up wlp2s0}true${endif}',
 		max = 12,
 		log = true,
 		x = 100,
 		y = 560,
 		r = 60,
 		width = 6,
-		start_angle = -90,
-		end_angle = 180
+		start_angle = -80,
+		end_angle = 200
 	},
 	{
-		name = 'upspeedf',
+		name = 'downspeedf',
 		arg = 'wlp2s0',
+		pre = '${if_up wlp2s0}true${endif}',
 		max = 12,
 		log = true,
 		x = 100,
 		y = 560,
 		r = 52,
 		width = 6,
-		start_angle = -90,
-		end_angle = 180
+		start_angle = -75,
+		end_angle = 220
+	},
+	{
+		name = 'upspeedf',
+		arg = 'enp3s0',
+		pre = '${if_up enp3s0}true${endif}',
+		max = 12,
+		log = true,
+		x = 100,
+		y = 720,
+		r = 60,
+		width = 6,
+		start_angle = -80,
+		end_angle = 200
+	},
+	{
+		name = 'downspeedf',
+		arg = 'enp3s0',
+		pre = '${if_up enp3s0}true${endif}',
+		max = 12,
+		log = true,
+		x = 100,
+		y = 720,
+		r = 52,
+		width = 6,
+		start_angle = -75,
+		end_angle = 220
 	}
 }
 
@@ -148,6 +176,13 @@ function draw_line(cr, pt)
 end
 
 function draw_ring(cr, val, pt)
+	if pt['pre'] ~= nil then
+		local pre = conky_parse(pt['pre'])
+		if pre ~= 'true' then
+			return
+		end
+	end
+
 	local angle_0 = pt['start_angle'] * math.pi / 180 - math.pi / 2
 	local angle_f = pt['end_angle'] * math.pi / 180 - math.pi / 2
 	local angle_t = angle_0 + val / pt['max'] * (angle_f - angle_0)
@@ -183,6 +218,7 @@ function conky_rings()
 	if conky_window == nil then
 		return
 	end
+	
 	local cs = cairo_xlib_surface_create(
 	conky_window.display, conky_window.drawable, conky_window.visual,
 	conky_window.width, conky_window.height)
