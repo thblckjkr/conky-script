@@ -3,4 +3,4 @@
 killall conky
 
 conky -c main.rc  &
-conky -c files.rc &
+conky -c rings.rc &

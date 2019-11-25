@@ -54,6 +54,10 @@ ${goto 70}${voffset -5}${memmax}
 ${goto 12}${voffset 92}${fs_used}
 ${goto 72}${voffset -5}${fs_size}
 
+${goto 80}${voffset 92}Wifi
+${goto 70}${voffset 15}${downspeed wlp2s0}
+${goto 70}${voffset 15}${upspeed wlp2s0}
+
 #${downspeed wlp2s0}
 #${upspeed wlp2s0}
 ]];
