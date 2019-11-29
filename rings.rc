@@ -41,8 +41,6 @@ conky.config = {
 	use_xft = true, 									-- antialiasing
 	font = 'font GE Inspira:pixelsize=20',		-- default font type
 	color0 = 'ffffff',								-- colors
-	color1 = '9039ad',
-	color2 = '522062',
 
 	lua_load = "scripts/conky_rings.lua",
 	lua_draw_hook_pre = 'rings'
