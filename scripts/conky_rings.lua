@@ -2,7 +2,8 @@ conf = {
 	bg_colour = 0xffffff,
 	bg_alpha = 0.3,
 	fg_colour = 0xd49250,
-	fg_alpha = 0.5
+	fg_alpha = 0.5,
+	factor = 0.65
 }
 elements = {
 	--[[ {
@@ -187,12 +188,12 @@ function draw_ring(cr, val, pt)
 	local angle_f = pt['end_angle'] * math.pi / 180 - math.pi / 2
 	local angle_t = angle_0 + val / pt['max'] * (angle_f - angle_0)
 
-	cairo_arc(cr, pt['x'], pt['y'], pt['r'], angle_0, angle_f)
+	cairo_arc(cr, pt['x'] * conf['factor'], pt['y'] * conf['factor'], pt['r'] * conf['factor'], angle_0, angle_f)
 	cairo_set_source_rgba(cr, rgba(conf['bg_colour'], conf['bg_alpha']))
-	cairo_set_line_width(cr, pt['width'])
+	cairo_set_line_width(cr, pt['width'] * conf['factor'])
 	cairo_stroke(cr)
 	
-	cairo_arc(cr, pt['x'], pt['y'], pt['r'], angle_0, angle_t)
+	cairo_arc(cr, pt['x'] * conf['factor'], pt['y'] * conf['factor'], pt['r'] * conf['factor'], angle_0, angle_t)
 	cairo_set_source_rgba(cr, rgba(conf['fg_colour'], conf['fg_alpha']))
 	cairo_stroke(cr)
 end

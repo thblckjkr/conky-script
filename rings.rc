@@ -27,8 +27,8 @@ conky.config = {
 	minimum_width =  160,							-- minimum width
 	minimum_height = 800, 							-- minimum height
 	alignment = 'top_right', 					-- centered
-	gap_x = 20,										-- x direction shift
-	gap_y = 50,										-- y direction shift
+	gap_x = -30,										-- x direction shift
+	gap_y = 30,										-- y direction shift
 
 	-- Graphics settings --
 	draw_shades = false, 							-- test shading
@@ -39,7 +39,7 @@ conky.config = {
 
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
-	font = 'font GE Inspira:pixelsize=20',		-- default font type
+	font = 'font GE Inspira:pixelsize=13',		-- default font type
 	color0 = 'ffffff',								-- colors
 	color1 = '9039ad',
 	color2 = '522062',
