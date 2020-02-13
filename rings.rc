@@ -25,10 +25,10 @@ conky.config = {
 	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager', 	-- window properties below = skip_taskbar = ignore tray undecorated = remove frame and buttons override = window manager override sticky = all workspaces
 	own_window_title = 'main',
 	minimum_width =  160,							-- minimum width
-	minimum_height = 800, 							-- minimum height
+	minimum_height = 400, 							-- minimum height
 	alignment = 'top_right', 					-- centered
 	gap_x = -30,										-- x direction shift
-	gap_y = 30,										-- y direction shift
+	gap_y = 60,										-- y direction shift
 
 	-- Graphics settings --
 	draw_shades = false, 							-- test shading
@@ -39,7 +39,7 @@ conky.config = {
 
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
-	font = 'font GE Inspira:pixelsize=13',		-- default font type
+	font = 'font Source Code Pro:pixelsize=14',-- default font type
 	color0 = 'ffffff',								-- colors
 	color1 = '9039ad',
 	color2 = '522062',
@@ -49,23 +49,17 @@ conky.config = {
 };
 
 conky.text = [[
-${goto 80}${voffset 65}${cpu}%
+${goto 60}${voffset 43}${cpu}%
 
-${goto 20}${voffset 115}${mem}
-${goto 70}${voffset -5}${memmax}
+${goto 10}${voffset 80}${mem}/
+${goto 40}${voffset -5}${memmax}
 
-${goto 12}${voffset 92}${fs_used}
-${goto 72}${voffset -5}${fs_size}
+${goto 10}${voffset 70}${fs_used}
+${goto 40}${voffset -5}${fs_size}
 
-${if_up wlp2s0}
-${goto 80}${voffset 45}Wifi
-${goto 20}${voffset 0}Up ${upspeed wlp2s0}
-${goto 55}${voffset -5}${downspeed wlp2s0}
-${endif}
-
-${if_up enp3s0}
-${goto 80}${voffset 20}Eth
-${goto 20}${voffset 0}Up ${upspeed enp3s0}
-${goto 55}${voffset -5}${downspeed enp3s0}
+${if_up enp1s0}
+${goto 60}${voffset 25}Eth
+${goto 10}${voffset 5}Up ${upspeed enp1s0}
+${goto 40}${voffset -5}${downspeed enp1s0}
 ${endif}
 ]];

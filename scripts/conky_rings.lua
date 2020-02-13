@@ -1,9 +1,9 @@
 conf = {
 	bg_colour = 0xffffff,
 	bg_alpha = 0.3,
-	fg_colour = 0xd49250,
-	fg_alpha = 0.5,
-	factor = 0.65
+	fg_colour = 0xc42d5b,
+	fg_alpha = 1,
+	factor = 0.7
 }
 elements = {
 	--[[ {
@@ -107,8 +107,8 @@ elements = {
 	},
 	{
 		name = 'upspeedf',
-		arg = 'wlp2s0',
-		pre = '${if_up wlp2s0}true${endif}',
+		arg = 'enp1s0',
+		pre = '${if_up enp1s0}true${endif}',
 		max = 12,
 		log = true,
 		x = 100,
@@ -120,38 +120,12 @@ elements = {
 	},
 	{
 		name = 'downspeedf',
-		arg = 'wlp2s0',
-		pre = '${if_up wlp2s0}true${endif}',
+		arg = 'enp1s0',
+		pre = '${if_up enp1s0}true${endif}',
 		max = 12,
 		log = true,
 		x = 100,
 		y = 560,
-		r = 52,
-		width = 6,
-		start_angle = -75,
-		end_angle = 220
-	},
-	{
-		name = 'upspeedf',
-		arg = 'enp3s0',
-		pre = '${if_up enp3s0}true${endif}',
-		max = 12,
-		log = true,
-		x = 100,
-		y = 720,
-		r = 60,
-		width = 6,
-		start_angle = -80,
-		end_angle = 200
-	},
-	{
-		name = 'downspeedf',
-		arg = 'enp3s0',
-		pre = '${if_up enp3s0}true${endif}',
-		max = 12,
-		log = true,
-		x = 100,
-		y = 720,
 		r = 52,
 		width = 6,
 		start_angle = -75,
