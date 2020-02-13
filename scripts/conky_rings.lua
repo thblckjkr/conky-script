@@ -2,7 +2,7 @@ conf = {
 	bg_colour = 0xffffff,
 	bg_alpha = 0.3,
 	fg_colour = 0xc42d5b,
-	fg_alpha = 1,
+	fg_alpha = 0.75,
 	factor = 0.7
 }
 elements = {

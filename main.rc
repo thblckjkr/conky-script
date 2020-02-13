@@ -14,6 +14,7 @@ conky.config = {
 	format_human_readable = true,					-- units in non-bytes
 
 	-- Window settings --
+	xinerama_head = 2,
 	own_window = true,								-- turn onm your own window settings
 	own_window_type = 'dock',						-- window types, override = window manager rules do not apply, desktop = unedited panel = always top, dock = always over, normal = normal
 	own_window_transparent = true,				-- conky window becomes transparent
@@ -37,7 +38,7 @@ conky.config = {
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
 	font = 'font GE Inspira:pixelsize=10',		-- default font type
-	color0 = 'ffffff',								-- colors
+	color0 = 'aec1d4',								-- colors
 	color1 = '9039ad',
 	color2 = '522062',
 };
@@ -64,7 +65,7 @@ ${voffset 12}${offset 95}${font GE Inspira:pixelsize=29}${offset -210}${time %a}
 #
 ${if_match "${exec pidof spotify}" != ""}${voffset -190}\
 ${if_match "${exec scripts/title.sh}" != ""}
-	${voffset 80}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/title.sh}
+	${voffset 180}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/title.sh}
 	${voffset -6}${font Noto Sans:pixelsize=20}${color1}Artist: \
 	${voffset 12}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/artist.sh}
 	${voffset -6}${font Noto Sans:pixelsize=20}${color1}Album: \

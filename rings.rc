@@ -40,7 +40,7 @@ conky.config = {
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
 	font = 'font Source Code Pro:pixelsize=14',-- default font type
-	color0 = 'ffffff',								-- colors
+	color0 = 'aec1d4',								-- colors
 	color1 = '9039ad',
 	color2 = '522062',
 
@@ -49,17 +49,17 @@ conky.config = {
 };
 
 conky.text = [[
-${goto 60}${voffset 43}${cpu}%
+${goto 55}${voffset 43}${cpu}%
 
 ${goto 10}${voffset 80}${mem}/
 ${goto 40}${voffset -5}${memmax}
 
-${goto 10}${voffset 70}${fs_used}
+${goto 10}${voffset 70}${fs_used}/
 ${goto 40}${voffset -5}${fs_size}
 
 ${if_up enp1s0}
-${goto 60}${voffset 25}Eth
-${goto 10}${voffset 5}Up ${upspeed enp1s0}
+${goto 60}${voffset 30}Eth
+${goto 10}${voffset 0}Up ${upspeed enp1s0}/
 ${goto 40}${voffset -5}${downspeed enp1s0}
 ${endif}
 ]];
