@@ -28,7 +28,7 @@ conky.config = {
 	minimum_height = 400, 							-- minimum height
 	alignment = 'top_right', 					-- centered
 	gap_x = -30,										-- x direction shift
-	gap_y = 60,										-- y direction shift
+	gap_y = 460,										-- y direction shift
 
 	-- Graphics settings --
 	draw_shades = false, 							-- test shading
@@ -39,17 +39,15 @@ conky.config = {
 
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
-	font = 'font Source Code Pro:pixelsize=14',-- default font type
-	color0 = 'aec1d4',								-- colors
-	color1 = '9039ad',
-	color2 = '522062',
+	font = 'font Source Code Variable:pixelsize=14',-- default font type
+	color0 = '1b2127',								-- colors
 
 	lua_load = "scripts/conky_rings.lua",
 	lua_draw_hook_pre = 'rings'
 };
 
 conky.text = [[
-${goto 55}${voffset 43}${cpu}%
+${color0}${goto 55}${voffset 43}${cpu}%
 
 ${goto 10}${voffset 80}${mem}/
 ${goto 40}${voffset -5}${memmax}

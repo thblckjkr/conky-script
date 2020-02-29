@@ -1,7 +1,7 @@
 conf = {
-	bg_colour = 0xffffff,
+	bg_colour = 0xeeeeee,
 	bg_alpha = 0.3,
-	fg_colour = 0xc42d5b,
+	fg_colour = 0x0769d3,
 	fg_alpha = 0.75,
 	factor = 0.7
 }
@@ -23,7 +23,7 @@ elements = {
 		max = 100,
 		x = 100,
 		y = 80,
-		r = 60,
+		r = 76,
 		width = 6,
 		start_angle = -90,
 		end_angle = 180
@@ -34,7 +34,7 @@ elements = {
 		max = 100,
 		x = 100,
 		y = 80,
-		r = 52,
+		r = 68,
 		width = 6,
 		start_angle = -90,
 		end_angle = 200
@@ -45,7 +45,7 @@ elements = {
 		max = 100,
 		x = 100,
 		y = 80,
-		r = 44,
+		r = 60,
 		width = 6,
 		start_angle = -90,
 		end_angle = 220
@@ -56,10 +56,32 @@ elements = {
 		max = 100,
 		x = 100,
 		y = 80,
+		r = 52,
+		width = 6,
+		start_angle = -90,
+		end_angle = 240
+	},
+	{
+		name = 'cpu',
+		arg = "cpu5",
+		max = 100,
+		x = 100,
+		y = 80,
+		r = 44,
+		width = 6,
+		start_angle = -90,
+		end_angle = 260
+	},
+	{
+		name = 'cpu',
+		arg = "cpu6",
+		max = 100,
+		x = 100,
+		y = 80,
 		r = 36,
 		width = 6,
 		start_angle = -90,
-		end_angle = 250
+		end_angle = 280
 	},
 	{
 		name = 'memperc',

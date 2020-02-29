@@ -25,7 +25,7 @@ conky.config = {
 	minimum_width =  200,							-- minimum width
 	minimum_height = 400, 							-- minimum height
 	alignment = 'middle_left', 					-- centered
-	gap_x = 60, 										-- x direction shift
+	gap_x = 1060, 										-- x direction shift
 	gap_y = -90,										-- y direction shift
 
 	-- Graphics settings --
@@ -37,9 +37,9 @@ conky.config = {
 
 	-- Text settings --
 	use_xft = true, 									-- antialiasing
-	font = 'font GE Inspira:pixelsize=10',		-- default font type
-	color0 = 'aec1d4',								-- colors
-	color1 = '9039ad',
+	font = 'font Source Code Variable:pixelsize=10',		-- default font type
+	color0 = '1b2127',								-- colors
+	color1 = '0769d3',
 	color2 = '522062',
 };
 
@@ -47,10 +47,10 @@ conky.text = [[
 #
 # Date & time
 #
-${voffset 10}${color0}${font GE Inspira:pixelsize=60}${time %I}${color2}:${color0}${time %M} \
-${voffset -28}${offset -15}${color1}${font GE Inspira:pixelsize=20}${time %d} \
-${voffset 0}${offset 0}${color0}${font GE Inspira:pixelsize=11}${time  %B} ${time %Y}${font} \
-${voffset 12}${offset 95}${font GE Inspira:pixelsize=29}${offset -210}${time %a}
+${voffset 0}${color0}${font Source Code Variable:pixelsize=60}${time %I}${color2}:${color0}${time %M} \
+${voffset -28}${offset -25}${color1}${font Source Code Variable:pixelsize=20}${time %d} \
+${voffset 0}${offset -10}${color0}${font Source Code Variable:pixelsize=15}${time  %B} ${time %Y}${font} \
+${voffset 12}${offset 65}${font Source Code Variable:pixelsize=29}${offset -210}${time %a}
 #
 # Battery remaining
 #
@@ -65,11 +65,11 @@ ${voffset 12}${offset 95}${font GE Inspira:pixelsize=29}${offset -210}${time %a}
 #
 ${if_match "${exec pidof spotify}" != ""}${voffset -190}\
 ${if_match "${exec scripts/title.sh}" != ""}
-	${voffset 180}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/title.sh}
+	${voffset 175}${goto 10}${font Source Code Variable:size=14}${color0}${exec scripts/title.sh}
 	${voffset -6}${font Noto Sans:pixelsize=20}${color1}Artist: \
-	${voffset 12}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/artist.sh}
+	${voffset 12}${goto 10}${font Source Code Variable:size=14}${color0}${exec scripts/artist.sh}
 	${voffset -6}${font Noto Sans:pixelsize=20}${color1}Album: \
-	${voffset 12}${goto 10}${font GE Inspira:size=14}${color0}${exec scripts/album.sh}
+	${voffset 12}${goto 10}${font Source Code Variable:size=14}${color0}${exec scripts/album.sh}
 ${endif}
 ${endif}
 ]];
