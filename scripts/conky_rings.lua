@@ -1,6 +1,6 @@
 conf = {
-	bg_colour = 0xeeeeee,
-	bg_alpha = 0.3,
+	bg_colour = 0xdddddd,
+	bg_alpha = 0.75,
 	fg_colour = 0x0769d3,
 	fg_alpha = 0.75,
 	factor = 0.7

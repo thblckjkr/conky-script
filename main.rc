@@ -24,6 +24,7 @@ conky.config = {
 	own_window_title = 'main',
 	minimum_width =  200,							-- minimum width
 	minimum_height = 400, 							-- minimum height
+	maximum_width = 400,
 	alignment = 'middle_left', 					-- centered
 	gap_x = 1060, 										-- x direction shift
 	gap_y = -90,										-- y direction shift
@@ -72,4 +73,17 @@ ${if_match "${exec scripts/title.sh}" != ""}
 	${voffset 12}${goto 10}${font Source Code Variable:size=14}${color0}${exec scripts/album.sh}
 ${endif}
 ${endif}
+
+${font Source Code Variable:size=12}${color0}Top CPU${hr 1}${color1}
+Name $alignr PID   CPU%${font Source Code Variable:size=10}
+${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%
+${top name 2} $alignr ${top pid 2} ${top cpu 2}% ${top mem 2}%
+${top name 3} $alignr ${top pid 3} ${top cpu 3}% ${top mem 3}%
+
+${font Source Code Variable:size=12}${color0}Top MEM${hr 1}${color1}
+Name $alignr PID   MEM%${font Source Code Variable:size=10}
+${top_mem name 1} $alignr ${top_mem pid 1} ${top_mem mem 1}%
+${top_mem name 2} $alignr ${top_mem pid 2} ${top_mem mem 2}%
+${top_mem name 3} $alignr ${top_mem pid 3} ${top_mem mem 3}%
+
 ]];
